@@ -52,7 +52,12 @@ def delete(id):
     return id
 
 
-
+@app.route("/update/<id>",methods=["PUT"])
+def update(id):
+    for i in dbb:
+        if int(i['id'])==int(id):
+            i["name"]="Akshata"
+    return "Updated"
 
 
 
