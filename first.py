@@ -45,9 +45,10 @@ def read():
 def delete(id):
     j=0
     for i in dbb:
-        print(i)
-        if i.id == id:
-            print("found")
+        print(i['id'])
+        if int(i['id'])==int(id):
+            dbb.pop(j)
+        j = j + 1
     return id
 
 
